@@ -10,6 +10,7 @@ interface ModalProps {
 function Modal({ onClose, children }: ModalProps) {
   const modalRoot = document.body;
 
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -33,6 +34,8 @@ function Modal({ onClose, children }: ModalProps) {
   };
 
   if (!modalRoot) return null;
+
+
 
   return createPortal(
     <div
