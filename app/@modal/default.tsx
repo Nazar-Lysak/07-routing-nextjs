@@ -1,6 +1,5 @@
 function Modal() {
-    return null;
+  return null;
 }
 
 export default Modal;
-

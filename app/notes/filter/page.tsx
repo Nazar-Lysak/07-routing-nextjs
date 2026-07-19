@@ -1,9 +1,9 @@
-import { redirect } from "next/navigation"
+import { redirect } from "next/navigation";
 
 function NotesFilter() {
-    redirect("/notes/filter/all");
+  redirect("/notes/filter/all");
 
-    return null;
+  return null;
 }
 
 export default NotesFilter;
