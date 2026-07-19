@@ -6,7 +6,7 @@ function SidebarNotes() {
   return (
     <ul>
       <li>
-        <Link href="/notes/filter/All">All</Link>
+        <Link href="/notes/filter/all">all</Link>
       </li>
       {tags.map((el) => (
         <li key={el}>

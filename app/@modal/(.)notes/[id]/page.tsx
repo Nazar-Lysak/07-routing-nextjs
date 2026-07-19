@@ -7,9 +7,9 @@ import {
 import NotePreviewClient from "./NotePreview.client";
 
 interface NotePewviewProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 async function NotePreview({ params }: NotePewviewProps) {

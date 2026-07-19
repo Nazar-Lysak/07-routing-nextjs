@@ -26,7 +26,7 @@ function NotesClient({ category }: NoteClientProps) {
     isError,
     isSuccess,
   } = useQuery({
-    queryKey: ["notes", searchQuery, page],
+    queryKey: ["notes", searchQuery, page, category],
     queryFn: () => fetchNotes(searchQuery, page, category),
     placeholderData: keepPreviousData,
   });
