@@ -9,18 +9,20 @@ interface FetchNotesResponse {
 interface HandleSubmitInterface {
   title: string;
   content: string;
-  tag: NoteTag
+  tag: NoteTag;
+  category?: string;
 }
 
 const TOKEN = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
 const API_URL = "https://notehub-public.goit.study/api/notes";
 
-export const fetchNotes = async (note: string, page: number): Promise<FetchNotesResponse> => {
+export const fetchNotes = async (note: string, page: number, category?: string | undefined): Promise<FetchNotesResponse> => {
   const { data } = await axios.get<FetchNotesResponse>(API_URL, {
     params: {
       search: note,
       page,
-      perPage: 10
+      perPage: 10,
+      tag: category
     },
     headers: {
       Authorization: `Bearer ${TOKEN}`,
