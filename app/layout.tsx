@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <TanStackProvider>
-        <body className="min-h-full flex flex-col">
+        <body className="min-h-dvh flex flex-col">
           <Header />
-          {children}
+          <div className="grow">
+            {children}
+          </div> 
           <Footer />
         </body>
       </TanStackProvider>
